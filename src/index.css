@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+@theme {
+    --color-background: #f3f4f6;
+}
+
+.black-button{
+    @apply box-border w-20 px-2 py-2 bg-black font-semibold text-white text-xs rounded-2xl;
+}
+.white-button{
+    @apply box-border w-20 px-4 py-2 bg-[#F2F2F2] font-semibold text-black text-sm rounded-2xl
+}
