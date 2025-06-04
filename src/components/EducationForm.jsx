@@ -1,6 +1,6 @@
 import Input from "./Input"
 import BlackButton from "./BlackButton"
-export default function EducationForm({ data, handleEducation }) {
+export default function EducationForm({ data, handleEducation , handleOpenSection}) {
     const handleFormSubmit = (e) => {
         e.preventDefault();
         const form = e.target;
@@ -12,6 +12,7 @@ export default function EducationForm({ data, handleEducation }) {
             endYear: formData.get('endYear'),
             location: formData.get('location')
         };
+        handleOpenSection();
         handleEducation(data, 'education');
     }
     return (

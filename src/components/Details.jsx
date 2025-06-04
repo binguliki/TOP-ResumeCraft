@@ -53,6 +53,7 @@ export default function Details({data, handleData}) {
                 <PersonalDetailsForm
                     data={data.personalDetails}
                     handlePersonalData={handleData}
+                    handleOpenSection={() => setOpenSection(null)}
                 />
             </Section>
             <Section
@@ -63,6 +64,7 @@ export default function Details({data, handleData}) {
                 <EducationForm
                     data={data.education}
                     handleEducation={handleData}
+                    handleOpenSection={() => setOpenSection(null)}
                 />
             </Section>
             <Section
@@ -73,6 +75,7 @@ export default function Details({data, handleData}) {
                 <ExperienceForm
                     data={data.experience}
                     handleExperience={handleData}
+                    handleOpenSection={() => setOpenSection(null)}
                 />
             </Section>
         </div>

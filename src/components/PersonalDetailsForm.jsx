@@ -1,6 +1,6 @@
 import Input from "./Input"
 import BlackButton from "./BlackButton"
-export default function PersonalDetailsForm({ data, handlePersonalData }) {
+export default function PersonalDetailsForm({ data, handlePersonalData, handleOpenSection }) {
     const handleFormSubmit = (e) => {
         e.preventDefault();
         const form = e.target;
@@ -11,6 +11,7 @@ export default function PersonalDetailsForm({ data, handlePersonalData }) {
             phoneNumber: formData.get("phoneNumber"),
             address: formData.get("address"),
         };
+        handleOpenSection();
         handlePersonalData(data, 'personalDetails');
     }
     return (

@@ -1,7 +1,7 @@
 import Input from "./Input";
 import BlackButton from "./BlackButton";
 
-export default function ExperienceForm({ data, handleExperience }) {
+export default function ExperienceForm({ data, handleExperience, handleOpenSection }) {
     const handleFormSubmit = (e) => {
         e.preventDefault();
         const form = e.target;
@@ -15,6 +15,7 @@ export default function ExperienceForm({ data, handleExperience }) {
             location: formData.get("location"),
             points: formData.get("points").split('\n')
         };
+        handleOpenSection();
         handleExperience(experienceData, 'experience');
     };
 
