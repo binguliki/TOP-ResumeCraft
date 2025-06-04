@@ -10,7 +10,7 @@ export default function Resume({ data }) {
                     <h1 className="text-3xl font-bold mb-2">{personalDetails.fullName}</h1>
                     <div className="text-gray-700 space-y-1">
                         <p>
-                            {personalDetails.email} | {personalDetails.phone} | {personalDetails.address}
+                            {personalDetails.email} | {personalDetails.phoneNumber} | {personalDetails.address}
                         </p>
                     </div>
                 </div>
